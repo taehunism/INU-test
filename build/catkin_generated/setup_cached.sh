@@ -8,6 +8,7 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/taehun/INU-test/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/taehun/INU-test/devel/lib:$LD_LIBRARY_PATH"
 export PWD='/home/taehun/INU-test/build'
 export ROSLISP_PACKAGE_DIRECTORIES='/home/taehun/INU-test/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/taehun/INU-test/src:$ROS_PACKAGE_PATH"

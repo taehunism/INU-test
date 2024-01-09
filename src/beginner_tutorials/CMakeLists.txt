@@ -103,10 +103,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES beginner_tutorials
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+ INCLUDE_DIRS include lib src
+ LIBRARIES beginner_tutorials
+ CATKIN_DEPENDS roscpp rospy std_msgs
+ DEPENDS system_lib
 )
 
 ###########
@@ -116,7 +116,9 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
+  src
+  lib
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -124,6 +126,15 @@ include_directories(
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/beginner_tutorials.cpp
 # )
+
+
+add_executable(hello_world_ros_node 
+  include/hello_world_ros.h
+  lib/hello_world_ros.cpp 
+  src/main_hello_world_ros_node.cpp
+  )
+target_link_libraries(hello_world_ros_node ${catkin_LIBRARIES})
+add_dependencies(hello_world_ros_node ${catkin_EXPORTED_TARGETS})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
