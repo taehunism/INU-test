@@ -18,6 +18,7 @@ using namespace ros;
 class PubBasicTestNode
 {
 public:
+// creater define      function -> in lib dir
   PubBasicTestNode();
   ~PubBasicTestNode();
 

@@ -30,10 +30,10 @@ private:
   NodeHandle nh_;
 
   // subscriber, string
-  void currStrCbLoop(const std_msgs::String::ConstPtr& msgRaw);
-  Subscriber subHelloWorldStr_;
-  std_msgs::String msgHelloWorldStr_;
-  bool bStrCbLoop;
+  void currStrCbLoop(const std_msgs::String::ConstPtr& msgRaw); // callback func
+  Subscriber subHelloWorldStr_; // sub name
+  std_msgs::String msgHelloWorldStr_; // sub data type
+  bool bStrCbLoop; // true and false    callback status return
 
   // subscriber, float32 multi-array
   void currFloat32MtArrayCbLoop(const std_msgs::Float32MultiArray::ConstPtr& msgRaw);
