@@ -1,0 +1,11 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find ros_lecture)/config/rosconsole.config"/>
+
+  <node name="hello_world" pkg="ros_lecture" type="hello_world_ros_node" output="screen"/>
+  
+  <node name="pub_basic" pkg="ros_lecture" type="pub_basic_test_ros_node" output="screen"/>
+  <node name="sub_basic" pkg="ros_lecture" type="sub_basic_test_ros_node" output="screen"/>
+  
+  <node name="pub_advanced" pkg="ros_lecture" type="pub_advanced_test" output="screen"/>
+  <node name="sub_advanced" pkg="ros_lecture" type="sub_advanced_test" output="screen"/>
+</launch>
